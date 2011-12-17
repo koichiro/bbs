@@ -1,0 +1,6 @@
+<tr>
+  <td>
+    <div><%= entry.user_name.present? ? entry.user_name : '名無しさん' %> <%= l entry.created_at %></div>
+    <div class="body"><%= simple_format entry.body %></div>
+  </td>
+</tr>

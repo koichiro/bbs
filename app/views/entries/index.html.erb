@@ -14,3 +14,12 @@
   <%= f.text_area :body, :rows => 5 %><br />
   <%= f.submit '投稿する' %>
 <% end %>
+
+<hr />
+
+<% unless @entries.empty? %>
+<table class="entries">
+<%= render :partial => 'entry', :collection => @entries %>
+</table>
+<% end %>
+  

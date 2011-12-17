@@ -5,3 +5,14 @@
  *= require_self
  *= require_tree . 
 */
+
+table.entries {
+    width: 100%;
+    border-collapse: collapse;
+}
+.entries td {
+    border-bottom: 1px solid #aaa;
+}
+td .body {
+    padding-left: 10px;
+}
