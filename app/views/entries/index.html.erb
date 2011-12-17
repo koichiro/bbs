@@ -1,4 +1,14 @@
 <h1>Shimane Univ. BBS</h1>
+<% unless @entry.errors.empty? %>
+<p class="error">
+  投稿内容にエラーがあります。
+  <ul>
+  <% @entry.errors.full_messages.each do |msg|  %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+</p>
+<% end %>
 <%= form_for :entry do |f|%>
   <%= f.label :user_name %><%= f.text_field :user_name %><br />
   <%= f.text_area :body, :rows => 5 %><br />
