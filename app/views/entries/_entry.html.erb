@@ -7,6 +7,6 @@
       <%= l entry.created_at %>
       <%= link_to "削除", entry_path(entry), :method => :delete, :confirm => '本当に削除しますか？' %>
     </div>
-    <div class="body"><%= simple_format entry.body %></div>
+    <div class="body"><%= simple_format h(entry.body) %></div>
   </td>
 </tr>
