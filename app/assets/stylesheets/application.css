@@ -15,4 +15,8 @@ table.entries {
 }
 td .body {
     padding-left: 10px;
+    clear: right;
+}
+td .toolbar {
+    float: right;
 }

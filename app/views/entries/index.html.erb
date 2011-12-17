@@ -1,4 +1,7 @@
 <h1>Shimane Univ. BBS</h1>
+<% if flash[:notice].present? %>
+<p class="notice"><%= flash[:notice] %></p>
+<% end %>
 <% unless @entry.errors.empty? %>
 <p class="error">
   投稿内容にエラーがあります。

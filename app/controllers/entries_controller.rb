@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*- 
 class EntriesController < ApplicationController
   def index
     @entry = Entry.new
@@ -11,6 +12,12 @@ class EntriesController < ApplicationController
     else
       render :index
     end
+  end
+  
+  def destroy
+    entry = Entry.find(params[:id])
+    entry.destroy
+    redirect_to entries_path, :notice => '投稿を削除しました。'
   end
 
 end

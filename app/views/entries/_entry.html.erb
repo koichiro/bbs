@@ -1,6 +1,12 @@
 <tr>
   <td>
-    <div><%= entry.user_name.present? ? entry.user_name : '名無しさん' %> <%= l entry.created_at %></div>
+    <div>
+      <%= entry.user_name.present? ? entry.user_name : '名無しさん' %>
+    </div>
+    <div class="toolbar">
+      <%= l entry.created_at %>
+      <%= link_to "削除", entry_path(entry), :method => :delete, :confirm => '本当に削除しますか？' %>
+    </div>
     <div class="body"><%= simple_format entry.body %></div>
   </td>
 </tr>
