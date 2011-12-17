@@ -1,2 +1,6 @@
-<h1>Entries#index</h1>
-<p>Find me in app/views/entries/index.html.erb</p>
+<h1>Shimane Univ. BBS</h1>
+<%= form_for :entry do |f|%>
+  <%= f.label :user_name %><%= f.text_field :user_name %><br />
+  <%= f.text_area :body, :rows => 5 %><br />
+  <%= f.submit '投稿する' %>
+<% end %>
